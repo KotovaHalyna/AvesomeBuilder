@@ -11,7 +11,7 @@ console.log('log ', buildItem.length);
 buildItem.forEach(object => {
     object.addEventListener('mouseover', ()=> {
         const attr = object.getAttribute('data-address')
-        console.log(attr);
+       
         cellAdress.innerText = attr
     })
 })
