@@ -1,3 +1,65 @@
-h1 {
-    color: blue;
+.build {
+  height: calc(100vh - 227px);
 }
+
+.build-item {
+    fill: rgb(127, 204, 255);
+    stroke: rgb(73, 124, 225);
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    stroke-width: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &.sold {
+        fill: rgb(161, 16, 16);
+        stroke: rgb(230, 81, 76);
+        &:hover {
+            cursor: no-drop;  
+        }  
+    }
+    
+    &:hover {
+        stroke-opacity: 1;
+        fill-opacity: 0.7;  
+    }
+}
+
+.genplan {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    color: #fff;
+    background: #121212;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h2{
+        font-size: 24px;
+    }
+    &-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    text-align: center;
+   }
+}  
+
+
+   .list-item {
+    display: flex;
+    flex-direction: column;
+     b {
+    font-size: 18px;
+   }  
+} 
+ 
+
+
+
+
+
+
