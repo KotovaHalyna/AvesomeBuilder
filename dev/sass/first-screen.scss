@@ -12,10 +12,14 @@
     cursor: pointer;
 
     &.sold {
-        fill: rgb(161, 16, 16);
-        stroke: rgb(230, 81, 76);
-        &:hover {
-            cursor: no-drop;  
+        fill: rgb(232, 79, 79);
+        stroke: rgb(232, 156, 153);
+        stroke-opacity: 1;
+        fill-opacity: 0.7;
+    
+        cursor: no-drop; 
+        &:hover { 
+            fill-opacity: 1;
         }  
     }
     
@@ -51,12 +55,14 @@
 
    .list-item {
     display: flex;
+    min-width: 235px;
     flex-direction: column;
      b {
     font-size: 18px;
    }  
 } 
  
+
 
 
 
