@@ -48,6 +48,27 @@ const calcInformation = ()=> buildItem.forEach(item => {
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
     dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
+
+    if(item.classList.contains('sold')) {
+        item.addEventListener('click', (event)=> {
+          event.preventDefault();
+     })
+  }
+    
 })
 
 calcInformation()
+
+//const x = 5
+
+//if (x === 1) {
+//    console.log("x идентичен 1");
+//} else if (x === 2)  {
+//   console.log('x больше либо равен 2');
+//} else if (x === 3)  {
+//    console.log('x больше либо равен 3');
+// } else if (x === 4)  {
+//    console.log('x больше либо равен 4');
+// } else {
+//    console.log("любой другой случай");
+// }
