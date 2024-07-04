@@ -9,12 +9,10 @@ const cellFlatsSold = document.querySelector('#flats-sold')
 
 
 const showInformation =(cell, attr)=> buildItem.forEach(object => {
-    object.addEventListener('mouseover', ()=> {
+    object.addEventListener('mouseover', () => {
         const value = object.getAttribute(attr)
         cell.innerText = value
-    })
-
-   
+    })   
 })
 
 showInformation(cellAdress, 'data-address')
@@ -41,20 +39,19 @@ const calcInformation = ()=> buildItem.forEach(item => {
     let flatsSold = Number(item.getAttribute('data-flats-sold')) 
 
     let flatsFree = flats - (flatsBooking + flatsSold);
-
-    console.log(flatsFree);
-    
     item.setAttribute('data-flats-free', flatsFree)
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
-    dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
+    dataFlatsFree === "0" ? (item.classList.add('sold'), item.setAttribute('data-modal', 'sold'))  : undefined;
 
-    if(item.classList.contains('sold')) {
-        item.addEventListener('click', (event)=> {
+
+    if (dataFlatsFree === "0") {
+        item.classList.add('sold')
+        item.setAttribute('data-modal', 'sold')
+        item.addEventListener('click', (event) => {
           event.preventDefault();
-     })
-  }
-    
+       })
+    } 
 })
 
 calcInformation()
