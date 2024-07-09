@@ -1,0 +1,22 @@
+.flat-stroke {
+    stroke: #04ff0000;
+    stroke-width: 3px;
+    fill: #04ff0000;
+    transition: .2s;
+    &:hover {
+        stroke: #05FF00;
+        fill: #04ff0051;
+    }
+}
+
+.status-overlay {
+    fill: #ffffff;
+    stroke: #00000000;
+    stroke-width: 2px;
+}
+
+.number-overlay {
+    fill: #80D34E;
+    stroke: #00000000;
+    stroke-width: 2px;
+}

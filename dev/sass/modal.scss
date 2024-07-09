@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     visibility: hidden;
-    transition: .3s;
+    transition: .1s;
     &.show {
         visibility: visible;
         background: #0009;
@@ -36,3 +36,22 @@
 .btn-row {
     margin-top: auto;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    input {
+    height: 48px;
+  }
+    &-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+
+
+
