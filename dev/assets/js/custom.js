@@ -40,14 +40,19 @@ const calcInformation = ()=> buildItem.forEach(item => {
 
     let flatsFree = flats - (flatsBooking + flatsSold);
     item.setAttribute('data-flats-free', flatsFree)
+    
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
-
+    dataFlatsFree === "0" 
+        ? (item.classList.add('sold'), item.setAttribute('data-modal', 'sold')) 
+         : undefined;
 
     if (dataFlatsFree === "0") {
         item.classList.add('sold');
-        item.setAttribute('data-modal', 'sold');
         item.setAttribute('data-triger-modal', 'sold');  
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+         })
     } 
 })
 

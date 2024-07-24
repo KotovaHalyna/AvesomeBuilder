@@ -53,14 +53,15 @@ const calcInformationLink = ()=> floorItem.forEach(item => {
     console.log(numflats - (flatsBooking + flatsSold));
     
 
-   if(flats === "0") {
-    item.classList.add('sold')
-    item.setAttribute('data-modal', 'sold')
+   if (flats === "0") {
+    item.classList.add('sold');
+    item.setAttribute('data-modal', 'sold');
+    item.setAttribute('data-triger-modal', 'sold');
     item.addEventListener('click', (event) => {
         event.preventDefault();   
-     })
+     });
    }
     
-})   
+});  
 
 calcInformationLink()
