@@ -7,8 +7,8 @@ const modalBody = document.querySelector('.modal-body')
 const modalArr = [
     {
         id:'sold',
-        title:'Нажаль всі квартири продано…(',
-        description:'Подивіться інші пропозиції у вільних будинках:)',
+        title:'Нажаль всі квартири продано…',
+        description:'Подивіться інші пропозиції у вільних будинках!',
         imgUrl:'assets/img/sold.png'
     },
     {
@@ -28,7 +28,7 @@ const modalArr = [
             <label for="answer">You'r answer</label>
             <textarea id="answer"></textarea>
         </div>
-        <button class="btn btn-secondary" type="submit" data-close="modal">Ok</button>
+        <button class="btn btn-secondary" type="submit" data-close="modal">Добре</button>
         <button class="btn btn-close" data-close="modal"></button>
       </form>`
     },

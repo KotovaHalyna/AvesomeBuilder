@@ -107,9 +107,6 @@ const installFloor = () => {
   const setInitialActive =()=> {
     const firstFlatSelector = document.querySelector('.flat')
     firstFlatSelector.classList.add('active')
-    const statusText = item.status === 'action' ? 'Акція' :
-                       item.status === 'sold' ? 'Продано' :
-                       item.status === 'booking' ? 'Бронь' : 'Вільно';
   }
   setInitialActive()
 
@@ -167,18 +164,19 @@ console.log(initialValue);
           const flatNumber = flatArr.filter(item => item.flatNumber === thisFlat)
           renderInformation(flatNumber)
        })
-
+      console.log(flat);
 
 
       if (flat.classList.contains('action')) {
-        flat.querySelector('.cell-flat-status').innerHTML = 'Акція'
-      } else if (flat.classList.contains('sold')) {
-        flat.querySelector('.cell-flat-status').innerHTML = 'Бронь'
-      } else if (flat.classList.contains('booking')) {
-        flat.querySelector('.cell-flat-status').innerHTML = 'Продано'
+        flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Акція'
+      } else if (flat.classList.contains('sold.flat-status .flat-status')) {
+        flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Бронь'
+      } else if (flat.classList.contains('booking.flat-status .flat-status')) {
+        flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Продано'
       } else {
-        flat.querySelector('.cell-flat-status').innerHTML = 'Вільно'
+        flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Вільно'
       }
+   
     })
 }
 
