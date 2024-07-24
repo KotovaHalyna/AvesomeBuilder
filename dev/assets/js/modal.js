@@ -71,9 +71,8 @@ function showModal(modalType) {
     else {
          modalBody.innerHTML = ` <h4 id="title">${modalData.title}</h4>
                               <p>${modalData.description}</p>
-                              <img src='${modalData.imgUrl}' alt='${modalData.id}'>
                               <div class="btn-row">
-                                   <button class="btn btn-primary" data-close="modal">Ok</button>
+                                   <button class="btn btn-primary" data-close="modal">Добре</button>
                                    <button class="btn btn-close" data-close="modal"></button> 
                               </div>`
     }
