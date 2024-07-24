@@ -1,0 +1,60 @@
+
+.floor-item {
+    fill: #2196f3b8;
+    stroke: #2196f3;
+    fill-opacity: 0; 
+    stroke-opacity: 0;
+    stroke-width: 5px;
+    transition: 0.2s;
+
+    &.sold {
+        fill: #f32136b8;
+        stroke: #c65a6c;
+        stroke-opacity: 1; 
+        fill-opacity: 0.7; 
+        cursor: no-drop;
+        &:hover {
+            fill-opacity: 1; 
+        }
+    }
+
+    &.booking {
+        fill: #eff211b8;
+        stroke: #ebe36d;
+        &:hover {
+            cursor: no-drop;
+        }
+    }
+
+    &:hover {
+        stroke-opacity: 1;
+        fill-opacity: 0.7;
+    }
+}
+
+.information__list {
+    background: #ecdd17;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    h2 {
+        font-size: 24px;
+    }  
+}
+
+.floor-options {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    text-align: center;  
+  }
+
+.floor-list {
+    display: flex;
+    flex-direction: column;
+    b {
+    font-size: 18px;
+    }
+}

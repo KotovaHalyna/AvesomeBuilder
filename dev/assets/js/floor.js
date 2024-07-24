@@ -104,49 +104,80 @@ const installFloor = () => {
         item.classList.remove('active')
     })
 
-  console.log(initialValue);
+  const setInitialActive =()=> {
+    const firstFlatSelector = document.querySelector('.flat')
+    firstFlatSelector.classList.add('active')
+    const statusText = item.status === 'action' ? 'Акція' :
+                       item.status === 'sold' ? 'Продано' :
+                       item.status === 'booking' ? 'Бронь' : 'Вільно';
+  }
+  setInitialActive()
 
-  const initialValue = [flatArr[1]]
-  .console.log(initialValue);
-
-
-  
-
+const initialValue = [flatArr[1]]
+console.log(initialValue);
 
     const renderInformation = (array) => {
       const flatInformation = array.map(item => {
-        return ('
-
-          <h2>${item.house}</h2>
-          <h2>${item.flatNumber}</h2>
-          <h2>${item.floor}</h2>
-          <h2>${item.flatNumber}</h2>
-          <h2>${item.rooms}</h2>
-          <h2>${item.square}</h2>
-          <h2>${item.price}</h2>
-          <h2>${item.priceTotal}</h2>
-          <h2>${item.status}</h2>
-          ')   
+        return (`
+          <div class="floor-option-item">
+            <div>Номер будинку:</div>
+            <div><h2>${item.house}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Поверх:</div>
+            <div><h2>${item.floor}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Номер квартири:</div>
+            <div><h2>${item.flatNumber}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Кількість кімнат:</div>
+            <div><h2>${item.rooms}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Площа квартири:</div>
+            <div><h2>${item.square}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Ціна за м2:</div>
+            <div><h2>${item.price}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Ціна за квартиру:</div>
+            <div><h2>${item.priceTotal}</h2></div>
+        </div>
+        <div class="floor-option-item">
+            <div>Статус квартири:</div>
+            <div><h2>${item.status}</h2></div>
+        </div>
+          `)   
       })
 
-        flatInfo.innerHTML = flatInformation.join('')
+        flatInfo.innerHTML = flatInformation
     }
     renderInformation(initialValue)
+  
 
     flats.forEach(flat => {
        flat.addEventListener('click', () => {
         removeActiveClass()
         flat.classList.add('active')
+          const thisFlat = flat.getAttribute('data-flat-number')
+          const flatNumber = flatArr.filter(item => item.flatNumber === thisFlat)
+          renderInformation(flatNumber)
        })
 
+
+
       if (flat.classList.contains('action')) {
-        flat.querySelector('.flat-status').innerHTML = 'Акція'
+        flat.querySelector('.cell-flat-status').innerHTML = 'Акція'
       } else if (flat.classList.contains('sold')) {
-        flat.querySelector('.flat-status').innerHTML = 'Бронь'
+        flat.querySelector('.cell-flat-status').innerHTML = 'Бронь'
       } else if (flat.classList.contains('booking')) {
-        flat.querySelector('.flat-status').innerHTML = 'Продано'
+        flat.querySelector('.cell-flat-status').innerHTML = 'Продано'
       } else {
-        flat.querySelector('.flat-status').innerHTML = 'Вільно'
+        flat.querySelector('.cell-flat-status').innerHTML = 'Вільно'
       }
     })
 }
