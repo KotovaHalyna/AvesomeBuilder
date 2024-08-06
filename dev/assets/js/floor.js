@@ -18,7 +18,7 @@ const flatArr = [{
     square: '60,7м²',
     price: '950$',
     priceTotal: '57,665$',
-    status: 'booking',
+    status: 'free',
 },
 {
     id: 2,
@@ -40,7 +40,7 @@ const flatArr = [{
     square: '82м²',
     price: '950$',
     priceTotal: '77,900$',
-    status: 'action',
+    status: 'sold',
 },
 {
     id: 4,
@@ -92,7 +92,7 @@ const flatArr = [{
     square: '79,3м²',
     price: '950$',
     priceTotal: '75,335$',
-    status: 'already-sold',
+    status: 'sold',
 },
 ]
 
@@ -172,7 +172,7 @@ console.log(initialValue);
       } else if (flat.classList.contains('sold.flat-status .flat-status')) {
         flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Бронь'
       } else if (flat.classList.contains('booking.flat-status .flat-status')) {
-        flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Продано'
+        flat.querySelector('.cell-flat-status .flat-status ').innerHTML = 'Продано'
       } else {
         flat.querySelector('.cell-flat-status .flat-status').innerHTML = 'Вільно'
       }

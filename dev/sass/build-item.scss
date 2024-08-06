@@ -1,3 +1,7 @@
+.image-build {
+    height: calc(100vh - 250px);
+    padding-left: 240px;
+}
 .floor-item {
     fill: #2196f3b8;
     stroke: #2196f3;
@@ -5,6 +9,8 @@
     stroke-opacity: 0;
     stroke-width: 5px;
     transition: 0.2s;
+
+
 
     &.sold {
         fill: #f32136b8;
@@ -29,9 +35,12 @@
         stroke-opacity: 1;
         fill-opacity: 0.7;
     }
-}
 
+   
+}
+ 
 .information-list-options {
+
     background: #ecdd17;
     padding: 24px;
     border-radius: 12px;
@@ -43,10 +52,11 @@
     }  
 }
 
+
 .floors-triger {
     list-style: none;
     display: flex;
-    gap: 18px;
+    gap: 55px;
     text-align: center;  
   }
 
@@ -54,6 +64,6 @@
     display: flex;
     flex-direction: column;
     b {
-    font-size: 18px;
+    font-size: 22px;
     }
 }
